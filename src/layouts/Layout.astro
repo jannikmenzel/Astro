@@ -1,5 +1,7 @@
 ---
 import "../styles/global.css";
+import Footer from "../components/Footer.astro";
+import Navbar from "../components/Navbar.astro";
 ---
 
 <html lang="en">
@@ -11,7 +13,11 @@ import "../styles/global.css";
         <meta name="generator" content={Astro.generator} />
         <title>Website</title>
     </head>
-    <body>
-        <slot />
+    <body class="min-h-screen flex flex-col">
+        <Navbar />
+        <main class="flex-1">
+            <slot />
+        </main>
+        <Footer />
     </body>
 </html>

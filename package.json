@@ -33,7 +33,10 @@
     "prettier-plugin-astro": "0.14.1"
   },
   "lint-staged": {
-    "*.js": "eslint --cache --fix",
-    "*.{js,css,md}": "prettier --write"
+    "*.{js,mjs,cjs,ts,mts,cts,astro}": [
+      "eslint --cache --fix",
+      "prettier --write"
+    ],
+    "*.{css,md,mdx,json,yml,yaml}": "prettier --write"
   }
 }

@@ -12,7 +12,9 @@ export default [
             "node_modules/**",
             "**/*.d.ts",
         ],
+    },
 
+    {
         plugins: {
             prettier,
         },

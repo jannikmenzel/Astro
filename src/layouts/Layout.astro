@@ -2,16 +2,35 @@
 import "../styles/global.css";
 import Footer from "../components/Footer.astro";
 import Navbar from "../components/Navbar.astro";
+
+const { title } = Astro.props;
+const siteTitle = "Website";
+const pageTitle = title ? `${title} | ${siteTitle}` : siteTitle;
 ---
 
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width" />
+        <script is:inline>
+            (() => {
+                const storageKey = "theme";
+                const savedTheme = localStorage.getItem(storageKey);
+                const prefersDark = window.matchMedia(
+                    "(prefers-color-scheme: dark)",
+                ).matches;
+                const isDark = savedTheme ? savedTheme === "dark" : prefersDark;
+
+                document.documentElement.classList.toggle("dark", isDark);
+                document.documentElement.style.colorScheme = isDark
+                    ? "dark"
+                    : "light";
+            })();
+        </script>
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <link rel="icon" href="/favicon.ico" />
         <meta name="generator" content={Astro.generator} />
-        <title>Website</title>
+        <title>{pageTitle}</title>
     </head>
     <body class="min-h-screen flex flex-col">
         <Navbar />

@@ -13,13 +13,14 @@
         "lint": "eslint .",
         "lint:fix": "eslint . --fix",
         "format": "prettier --write .",
-        "prepare": "husky && husky install"
+        "prepare": "husky"
     },
     "dependencies": {
         "@fontsource/playfair-display": "^5.2.8",
         "@fontsource/poppins": "^5.2.7",
         "@tailwindcss/vite": "^4.2.2",
         "astro": "^6.0.7",
+        "eslint-plugin-prettier": "^5.5.5",
         "tailwindcss": "^4.2.2"
     },
     "devDependencies": {
@@ -33,11 +34,10 @@
         "prettier-plugin-astro": "0.14.1"
     },
     "lint-staged": {
-        "*.{js,mjs,cjs,ts,mts,cts,astro,jsx,tsx,json,css,scss,md}": [
+        "**/*.{js,mjs,cjs,ts,mts,cts,jsx,tsx,astro}": [
             "eslint --cache --fix",
             "prettier --write"
         ],
-        "*.{css,md,mdx,json,yml,yaml}": "prettier --write"
+        "**/*.{css,scss,md,mdx,json,yml,yaml}": "prettier --write"
     }
 }
-

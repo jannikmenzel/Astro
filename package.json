@@ -12,6 +12,7 @@
     "astro": "astro",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
+    "format": "prettier --write .",
     "prepare": "husky && husky install"
   },
   "dependencies": {

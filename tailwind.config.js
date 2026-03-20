@@ -1,5 +1,5 @@
 export default {
-    content: ['./src/**/*.{astro,html,js,jsx,json,md,mdx,svelte,ts,tsx,vue}'],
+    content: ["./src/**/*.{astro,html,js,jsx,json,md,mdx,svelte,ts,tsx,vue}"],
     theme: {
         extend: {
             colors: {
@@ -36,11 +36,11 @@ export default {
                 ring: "var(--ring)",
                 navbar: "var(--navbar)",
                 chart: {
-                    "1": "var(--chart-1)",
-                    "2": "var(--chart-2)",
-                    "3": "var(--chart-3)",
-                    "4": "var(--chart-4)",
-                    "5": "var(--chart-5)",
+                    1: "var(--chart-1)",
+                    2: "var(--chart-2)",
+                    3: "var(--chart-3)",
+                    4: "var(--chart-4)",
+                    5: "var(--chart-5)",
                 },
             },
             borderRadius: {
@@ -54,5 +54,5 @@ export default {
             },
         },
     },
-    darkMode: 'class',
+    darkMode: "class",
 };
